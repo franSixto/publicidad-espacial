@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-font-smoothing: antialiased; }
+  body { @apply bg-white text-ink; }
+  ::selection { @apply bg-brand-100; }
+}
+
+.leaflet-container { font-family: inherit; z-index: 0; }
+.price-pin {
+  @apply rounded-full border border-gray-300 bg-white px-2.5 py-1 text-xs font-bold text-ink shadow-md transition;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+}
+.price-pin:hover, .price-pin.active { @apply scale-110 bg-ink text-white; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
